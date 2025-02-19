@@ -1,1 +1,1 @@
-# Django Project set up
+# Django Project set up working directory
