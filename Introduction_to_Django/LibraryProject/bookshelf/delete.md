@@ -4,10 +4,10 @@
 ```python
 book_to_delete = Book.objects.get(title="Nineteen Eighty-Four")
 book_to_delete.delete()
-print(Book.objects.all())
+print(Book.objects.all())  # Should return an empty queryset
 ```
 
 ## Output:
 ```
-(Paste your actual output here)
+[]
 ```
