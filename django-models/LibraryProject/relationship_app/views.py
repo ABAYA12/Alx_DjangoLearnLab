@@ -7,7 +7,7 @@ from .models import Library
 def list_books(request):
     books = Book.objects.all()
     book_list = [f"{book.title} by {book.author.name}" for book in books]
-    return render(request, "list_books.html", {"book_list": book_list})
+    return render(request, "relationship_app/list_books.html", {"book_list": book_list})
 
 # Implement Class-based View:
 
@@ -15,7 +15,7 @@ def list_books(request):
 # Utilize Django’s ListView or DetailView to structure this class-based view
 class LibraryDetailView(DetailView):
     model = Library
-    template_name = "library_detail.html"
+    template_name = "relationship_app/library_detail.html"
     context_object_name = "library"
 
     def get_context_data(self, **kwargs):
