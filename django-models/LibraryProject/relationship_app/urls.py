@@ -1,5 +1,6 @@
 from django.urls import path
-from relationship_app.views import LibraryDetailView, list_books
+from .views import LibraryDetailView
+from .views import list_books
 
 urlpatterns = [
     path("", list_books, name="list_books"),
